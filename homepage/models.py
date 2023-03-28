@@ -11,11 +11,11 @@ class Proyect(models.Model):
 
 class Usuario(models.Model):
     nombre_completo = models.CharField(max_length=200)
-    NIT = models.IntegerField(max_length=10)
+    NIT = models.IntegerField()
     password = models.CharField(max_length=100)
     correo = models.EmailField()
-    numero_telefono: models.IntegerField(max_length=10)
-    numero_cuenta_bancaria: models.IntegerField(max_length=100)
+    numero_telefono: models.IntegerField()
+    numero_cuenta_bancaria: models.IntegerField()
     banco = models.CharField(max_length=100)
 
     def __str__(self) -> str:
@@ -45,8 +45,8 @@ class Producto(models.Model):
     producto_id = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100)
     descripcion = models.TextField(max_length=200)
-    precio = models.IntegerField(max_length=10)
-    descuento = models.IntegerField(max_length=10)
+    precio = models.IntegerField()
+    descuento = models.IntegerField()
 
     def __str__(self) -> str:
         return self.nombre   
