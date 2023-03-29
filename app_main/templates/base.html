@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Click</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url 'home' %}">Inicio</a>
+            </li>
+            <li>
+                <a href="{% url 'contactanos' %}">Contactanos</a>
+            </li>
+            <li>
+                <a href="{% url 'acerca_nosotros' %}">Acerca de nosotros</a>
+            </li>
+            <li>
+                <a href="{% url 'pagina_registro' %}">Reguistrarse</a>
+            </li>
+            <li>
+                <a href="{% url 'iniciar_sesion' %}">Iniciar sesion</a>
+            </li>
+            <li>
+                <a href="{% url 'perfil' %}">perfiles</a>
+            </li>
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>
